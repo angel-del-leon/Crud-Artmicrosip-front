@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="card">
+        <div class="card-heard">
+            <h2>Listar Artmicrosip</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Unidad de Medida</th>
+                        <th>Clave</th>
+                        <th>Precio</th>
+                        <th>Eliminar</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let m of artmicrosip">
+                        <td>{{m.id}}</td>
+                        <td>{{m.nombre}}</td>
+                        <td>{{m.medida}}</td>
+                        <td>{{m.clave}}</td>
+                        <td>{{m.precio}}</td>
+                        <td><button (click)="Eliminar(m)" class="btn btn-danger">Eliminar</button></td>
+                        <td><button (click)="Editar(m)" class="btn btn-warning">Editar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

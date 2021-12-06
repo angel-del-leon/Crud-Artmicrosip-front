@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card">
+        <div class="card-heard">
+            <h2>Agregar Articulo</h2>
+        </div>
+        <div class="card-body">
+            <form action = "">
+                <div class="row">
+                <div class="form-group">
+                    <label>Id:</label>
+                    <input type="text" class="form-control" name="id" [(ngModel)]="artmicrosip.id">
+                </div>
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="artmicrosip.nombre">
+                </div>
+
+                <div class="form-group">
+                    <label>Unidad de medida:</label>
+                    <select class="form-select" aria-label="Default select example" (change)="pieza($event)">
+                        <option selected value="">Selecione una opcion</option>
+                        <option selected value="PIEZA">PIEZA</option>
+                        <option selected value="KILOGRAMO">KILOGRAMO</option>
+                        <option selected value="PULGADA">PULGADA</option>
+                        <option selected value="LITROS">LITROS</option>
+                      </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>clave:</label>
+                    <input type="text" class="form-control" name="clave" [(ngModel)]="artmicrosip.clave">
+                </div>
+                
+                <div class="form-group">
+                    <label>precio:</label>
+                    <input type="text" class="form-control" name="precio" [(ngModel)]="artmicrosip.precio">
+                </div>
+               
+            </div>
+            <button class="btn btn-success" (click)="Guardar()">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "pacman" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
